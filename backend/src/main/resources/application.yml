@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+
+quant.api:
+  base-url: https://quantapi.51ifind.com/api/v1/
+  access-token: 5c7f3670ebd2e6049a9018c577b178bdfa8a8f56.signs_Nzg4Nzk0MDgx
+
+logging:
+  level:
+    com.example.futures: DEBUG
+
+spring:
+  main:
+    allow-circular-references: true
