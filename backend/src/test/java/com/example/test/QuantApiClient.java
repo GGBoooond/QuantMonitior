@@ -16,10 +16,10 @@ public class QuantApiClient {
     public static void main(String[] args) {
         // First get the access token
 //        getAccessToken("此处填写refresh_token");
-        accessToken = "5c7f3670ebd2e6049a9018c577b178bdfa8a8f56.signs_Nzg4Nzk0MDgx";
+        accessToken = "7e309032eab153adc8eb21651dafd42e12ca78f7.signs_Nzg4Nzk0MDgx";
         // Then you can call any of the API functions
         try {
-//            realTime();
+            realTime();
             highFrequency();
             // historyQuotes();
             // basicData();
@@ -64,7 +64,7 @@ public class QuantApiClient {
         String url = BASE_URL + "real_time_quotation";
 
         Map<String, Object> requestBody = new HashMap<>();
-        requestBody.put("codes", "RU00.SHF");
+        requestBody.put("codes", "PFZL.CZC");
         requestBody.put("indicators", "latest");
 
         while (true) {
@@ -79,8 +79,8 @@ public class QuantApiClient {
                 // Process the response data as needed
                 // You can use Jackson to parse the JSON into Java objects
 
-                TimeUnit.SECONDS.sleep(3);
-            } catch (InterruptedException e) {
+//                TimeUnit.SECONDS.sleep(3);
+            } catch (Exception e) {
                 Thread.currentThread().interrupt();
                 break;
             }
